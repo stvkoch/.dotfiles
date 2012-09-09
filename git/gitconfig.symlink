@@ -5,10 +5,10 @@
 [hub]
         protocol = https
 [user]
-        name = Zach Holman
-        email = zach@zachholman.com
-[credential]
-        helper = osxkeychain
+        name = Steven Koch
+        email = stvkoch@gmail.com
+#[credential]
+#        helper = osxkeychain
 [alias]
         co = checkout
         promote = !$ZSH/bin/git-promote
