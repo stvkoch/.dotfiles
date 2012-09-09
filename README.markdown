@@ -58,7 +58,7 @@ bubble bath.
 - If you install the excellent [rbenv](https://github.com/sstephenson/rbenv) to
   manage multiple rubies, your current branch will show up in the prompt. Bonus.
 
-
+˙
 ## thanks
 
 forked and adapted from:
