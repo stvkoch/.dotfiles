@@ -4,9 +4,9 @@
 
 unamestr=`uname`
 
-if [[ "$unamestr" == 'Linux' ]]; then
+if [[ "$unamestr" == Linux ]]; then
    . script/apt-get
-elif [[ "$unamestr" == 'Darwin' ]]; then
+elif [[ "$unamestr" == Darwin ]]; then
    . script/homebrew
 fi
 
