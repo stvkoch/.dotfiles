@@ -6,7 +6,7 @@ Run this:
 ```sh
 git clone https://github.com/stvkoch/.dotfiles ~/.dotfiles
 cd ~/.dotfiles
-script/bootstrap
+script/bootstrap #detect maocx or linux debian distribution
 ```
 
 This will symlink the appropriate files in `.dotfiles` to your home directory.
