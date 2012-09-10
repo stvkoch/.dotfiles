@@ -1,0 +1,3 @@
+:t$ (copy $ line)
+yy (copy the line)  yyp copy and paste (duplicate)
+p (paste the copied or deleted text **after** the current line)
