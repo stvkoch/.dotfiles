@@ -1,5 +1,5 @@
 #!/bin/sh
-#
+
 # Usage: git-up
 #        git-reup
 #
@@ -8,9 +8,6 @@
 #
 # Inspired by Kyle Neath's `git up' alias:
 # http://gist.github.com/249223
-#
-# Stolen from Ryan Tomayko
-# http://github.com/rtomayko/dotfiles/blob/rtomayko/bin/git-up
 
 set -e
 

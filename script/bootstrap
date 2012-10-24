@@ -4,12 +4,13 @@
 
 unamestr=`uname`
 
-if [[ "$unamestr" == Linux ]]; then
-   . script/apt-get
-elif [[ "$unamestr" == Darwin ]]; then
-   . script/homebrew
-fi
+# if [ "$unamestr" = Linux ]; then
+#    . script/apt-get
+# else
+#    . script/homebrew
+# fi
+
 
 
 # Run the install (I'd like to pull this out of rake, eventually)
-rake install
+rake install #-f $ZSH/Rakefile

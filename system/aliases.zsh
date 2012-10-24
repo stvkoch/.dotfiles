@@ -8,3 +8,18 @@ then
   alias ll="gls -l --color"
   alias la='gls -A --color'
 fi
+
+
+unamestr=`uname`
+
+if [ "$unamestr" = Linux ]; then
+	alias pbcopy='xsel --clipboard --input'
+	alias pbpaste='xsel --clipboard --output'
+fi
+
+
+alias over='cd /servers/gameover2010'
+alias cinema='cd /servers/cinema'
+alias app='cd /servers/cinema/app'
+alias bo='cd /servers/cinema/bo'
+alias ws='cd /servers/cinema/ws'

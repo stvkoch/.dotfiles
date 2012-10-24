@@ -1,0 +1,1 @@
+/home/stvkoch/.dotfiles/vim/vim.symlink
