@@ -31,3 +31,10 @@
         prompt = false
 [help]
         autocorrect = 1
+[push]
+	default = matching
+[pull]
+	default = matching
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
