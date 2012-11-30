@@ -4,11 +4,11 @@
 
 unamestr=`uname`
 
-# if [ "$unamestr" = Linux ]; then
-#    . script/apt-get
-# else
-#    . script/homebrew
-# fi
+ if [ "$unamestr" = Linux ]; then
+    . script/apt-get
+ else
+    . script/homebrew
+ fi
 
 
 

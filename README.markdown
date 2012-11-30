@@ -46,6 +46,7 @@ There's a few special files in the hierarchy.
   symlinked in when you run `rake install`.
 - **topic/\*.completion.sh**: Any files ending in `completion.sh` get loaded
   last so that they get loaded after we set up zsh autocomplete functions.
+- if you need ignore same files put on personal folder, or referencie on .gitignore
 
 ## add-ons
 

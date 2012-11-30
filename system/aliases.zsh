@@ -9,6 +9,8 @@ then
   alias la='gls -A --color'
 fi
 
+alias lsg='ls -lsa|grep'
+
 unamestr=`uname`
 alias distro='cat /etc/*-release'
 
@@ -17,16 +19,7 @@ if [ "$unamestr" = Linux ]; then
 	alias pbpaste='xsel --clipboard --output'
 fi
 
-alias over='cd /servers/gameover2010'
-alias cinema='cd /servers/cinema'
-alias app='cd /servers/cinema/app'
-alias bo='cd /servers/cinema/bo'
-alias ws='cd /servers/cinema/ws'
+#depencie coreutils
 
-
-
-alias start-cinema-git='unlink /servers/cinema;ln -s /servers/cinema-git-olive /servers/cinema; cd /servers/cinema-git-olive; subl .&'
-alias start-cinema-svn='unlink /servers/cinema;ln -s /servers/cinema-svn-olive /servers/cinema; cd /servers/cinema-svn-olive; subl .&'
-
-alias random_man='man $(ls /bin /usr/bin | shuf -n 1)'
-alias random_man_name='man $(ls /usr/bin | shuf -n 1)| sed -n "/^NAME/ { n;p;q }"'
+alias random_man="man $(ls /bin /usr/bin | perl -MList::Util -e 'print List::Util::first { defined($_) } List::Util::shuffle(<>)')"
+alias random_man_name='random_man|sed -n -e "/^NAME/{n;p;q;}"'
