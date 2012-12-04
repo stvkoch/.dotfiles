@@ -1,0 +1,12 @@
+#!/bin/sh
+
+
+php /Users/stevenkoch/Sites/cinema-olive/bo/scripts/execute.php culture/movie-import-new start=-10 weeks=40
+php /Users/stevenkoch/Sites/cinema-olive/bo/scripts/execute.php culture/movie-import-schedule sleep=1000
+php /Users/stevenkoch/Sites/cinema-olive/bo/scripts/execute.php culture/movie-rebuild-sessions delete=1
+php /Users/stevenkoch/Sites/cinema-olive/bo/scripts/execute.php culture/movie-import-new start=-10 weeks=40
+php /Users/stevenkoch/Sites/cinema-olive/bo/scripts/execute.php citation/votes2ratings
+php /Users/stevenkoch/Sites/cinema-olive/bo/scripts/execute.php saber/import-person proxy=10.135.32.7 port=3128 verbose=1
+php /Users/stevenkoch/Sites/cinema-olive/bo/scripts/execute.php purge/schedule
+php /Users/stevenkoch/Sites/cinema-olive/bo/scripts/execute.php feeds/tvprime env=prod
+php /Users/stevenkoch/Sites/cinema-olive/bo/scripts/execute.php feeds/premiere env=pro

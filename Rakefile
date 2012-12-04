@@ -1,5 +1,7 @@
 require 'rake'
 
+puts "init reakefile"
+
 desc "Hook our dotfiles into system-standard positions."
 task :install do
   linkables = Dir.glob('*/**{.symlink}')

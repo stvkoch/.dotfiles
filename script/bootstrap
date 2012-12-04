@@ -5,12 +5,12 @@
 unamestr=`uname`
 
  if [ "$unamestr" = Linux ]; then
-    . script/apt-get
+    . ~/.dotfiles/script/apt-get
  else
-    . script/homebrew
+    . ~/.dotfiles/script/homebrew
  fi
 
 
-
+echo "#### Install $ZSH ####"
 # Run the install (I'd like to pull this out of rake, eventually)
-rake install #-f $ZSH/Rakefile
+rake install -f $ZSH/Rakefile
