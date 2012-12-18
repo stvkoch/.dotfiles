@@ -34,7 +34,7 @@
 [push]
 	default = current
 [pull]
-	default = matching
+	default = current
 [branch "master"]
 	remote = origin
 	merge = refs/heads/master
