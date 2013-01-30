@@ -12,16 +12,16 @@ exec("git diff-index --cached --name-only {$against}", $output);
 
 $filename_pattern_PHP = '/\.php$/';
 $filename_pattern_XML = '/\.xml$/';
+$filename_pattern_YML = '/\.(yml|yaml)$/';
 
 
 $exit_status = 0;
 
 foreach ($output as $file) {
     
-    if (file_exists($file){
+    if (file_exists($file)){
     	if(preg_match($filename_pattern_PHP, $file)) {
 	        $lint_output = array();
-
 	        exec('php -l ' . escapeshellarg($file), $lint_output, $return);
 	        if ($return == 0) {
 	            continue;
@@ -31,14 +31,21 @@ foreach ($output as $file) {
 	    }
 	    elseif (preg_match($filename_pattern_XML, $file)) {
 	        $lint_output = array();
-
 	        exec('xmllint --noout ' . escapeshellarg($file), $lint_output, $return);
 	        if ($return == 0) {
 	            continue;
 	        }
 	        echo implode("\n", $lint_output), "\n";
 	        $exit_status = 1;
-	    }	
+	    }elseif (preg_match($filename_pattern_YML, $file)) {
+	        $lint_output = array();
+	        exec('php -r  \'yaml_parse_file("' . escapeshellarg($file) . '");\'', $lint_output, $return);
+	        if (count($lint_output) == 0) {
+	            continue;
+	        }
+	        echo implode("\n", $lint_output), "\n";
+	        $exit_status = 1;
+	    }
     } 
 }
 
