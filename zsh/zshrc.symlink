@@ -17,6 +17,8 @@ for config_file ($ZSH/**/*.zsh) source $config_file
 #fi
 
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
 
 # initialize autocomplete here, otherwise functions won't be loaded
 #autoload  -U #compinit
