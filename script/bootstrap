@@ -13,4 +13,4 @@ unamestr=`uname`
 
 echo "#### Install $ZSH ####"
 # Run the install (I'd like to pull this out of rake, eventually)
-rake install -f $ZSH/Rakefile
+rake install -f ../Rakefile --trace

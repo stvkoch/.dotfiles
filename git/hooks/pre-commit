@@ -18,7 +18,6 @@ $filename_pattern_YML = '/\.(yml|yaml)$/';
 $exit_status = 0;
 
 foreach ($output as $file) {
-    
     if (file_exists($file)){
     	if(preg_match($filename_pattern_PHP, $file)) {
 	        $lint_output = array();
